@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_blue_gradient.xml" value="0.1345" />
+        <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.1345" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_earning_list.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/fragment_earning_list.xml" value="0.21427001953125008" />
         <entry key="app/src/main/res/layout/item_earning.xml" value="0.1390625" />
       </map>
     </option>
