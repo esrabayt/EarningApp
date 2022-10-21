@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/earning_list_fragment">
+
+    <fragment
+        android:id="@+id/earning_list_fragment"
+        android:name="com.esrakaya.earningapp.ui.list.EarningListFragment"
+        android:label="Earning List Screen"
+        tools:layout="@layout/fragment_earning_list" />
+
+</navigation>
