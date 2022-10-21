@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class CommonRepository @Inject constructor(
+class EarningRepository @Inject constructor(
     private val earningService: EarningService,
     private val handleException: HandleException
 ) {
