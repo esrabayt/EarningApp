@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface EarningService {
 
-    @GET("")
+    @GET(".")
     suspend fun getEarningList(): EarningResponse
 }

@@ -20,6 +20,8 @@ class EarningListFragment : Fragment() {
 
     private val viewModel: EarningListViewModel by viewModels()
 
+    private val earningListAdapter: EarningListAdapter by lazy { EarningListAdapter() }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,13 +35,12 @@ class EarningListFragment : Fragment() {
         collectEvent(viewModel.uiEvent, ::handleEvent)
     }
 
-
     private fun initView() = with(binding) {
-
+        rvEarnings.adapter = earningListAdapter
     }
 
     private fun renderView(uiState: EarningListUiState) = with(binding) {
-
+        earningListAdapter.submitList(uiState.earningModel?.userList)
     }
 
     private fun handleEvent(uiEvent: EarningListUiEvent) {
