@@ -9,4 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue_1">#2b0c76</color>
     <color name="blue_2">#00bfff</color>
+    <color name="blue_3">#1a0875</color>
+    <color name="white_1">#efefef</color>
+    <color name="orange_1">#ff6500</color>
+    <color name="orange_2">#ff0058</color>
+    <color name="orange_3">#ff611e</color>
+    <color name="orange_4">#ff4243</color>
+    <color name="gray">#4f5a62</color>
+    <color name="gray_1">#a1a7ab</color>
+    <color name="gray_2">#a2a8ab</color>
 </resources>

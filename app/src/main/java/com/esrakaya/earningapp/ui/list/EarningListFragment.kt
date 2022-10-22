@@ -1,5 +1,6 @@
 package com.esrakaya.earningapp.ui.list
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.esrakaya.earningapp.R
 import com.esrakaya.earningapp.databinding.FragmentEarningListBinding
 import com.esrakaya.earningapp.utils.collectEvent
 import com.esrakaya.earningapp.utils.collectState
+import com.esrakaya.earningapp.utils.underline
 import com.esrakaya.earningapp.utils.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,11 +38,19 @@ class EarningListFragment : Fragment() {
     }
 
     private fun initView() = with(binding) {
+        tvTerms.underline()
+        tvHowto.underline()
+        tvClaim.underline()
         rvEarnings.adapter = earningListAdapter
     }
 
+    @SuppressLint("SetTextI18n")
     private fun renderView(uiState: EarningListUiState) = with(binding) {
-        earningListAdapter.submitList(uiState.earningModel?.userList)
+        val earning = uiState.earningModel ?: return
+        earningListAdapter.submitList(earning.items)
+        tvTotalEarned.text = "${earning.totalEarned}€"
+        tvPotancialEarned.text = "${earning.potentialEarned}€"
+        tvMaxEarnings.text = getString(R.string.maximum_earned, earning.maximumEarning)
     }
 
     private fun handleEvent(uiEvent: EarningListUiEvent) {
