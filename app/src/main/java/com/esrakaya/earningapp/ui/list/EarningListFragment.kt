@@ -46,11 +46,10 @@ class EarningListFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun renderView(uiState: EarningListUiState) = with(binding) {
-        val earning = uiState.earningModel ?: return
-        earningListAdapter.submitList(earning.items)
-        tvTotalEarned.text = "${earning.totalEarned}€"
-        tvPotancialEarned.text = "${earning.potentialEarned}€"
-        tvMaxEarnings.text = getString(R.string.maximum_earned, earning.maximumEarning)
+        earningListAdapter.submitList(uiState.items)
+        tvTotalEarned.text = "${uiState.totalEarned}€"
+        tvPotancialEarned.text = "${uiState.potentialEarned}€"
+        tvMaxEarnings.text = getString(R.string.maximum_earned, uiState.maximumEarning)
     }
 
     private fun handleEvent(uiEvent: EarningListUiEvent) {
