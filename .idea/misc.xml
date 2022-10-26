@@ -11,7 +11,7 @@
         <entry key="app/src/main/res/drawable/ic_terms.xml" value="0.1345" />
         <entry key="app/src/main/res/drawable/ic_user.xml" value="0.1345" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2074074074074074" />
-        <entry key="app/src/main/res/layout/fragment_earning_list.xml" value="0.4076086956521739" />
+        <entry key="app/src/main/res/layout/fragment_earning_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_add.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/item_earning.xml" value="0.18118743896484374" />
         <entry key="app/src/main/res/layout/item_invite.xml" value="0.1" />

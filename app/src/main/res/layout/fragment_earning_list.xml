@@ -110,38 +110,58 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/clTop"
+        app:layout_constraintTop_toBottomOf="@id/clTop" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view">
+
+        <include
+            layout="@layout/item_earning"
+            android:visibility="invisible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInvited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:paddingHorizontal="32dp"
+        android:text="@string/invited"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/clBottom"
+        app:layout_constraintStart_toStartOf="@id/clBottom" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clBottom"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="-90dp"
         android:paddingHorizontal="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/clTop">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvInvited"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="@string/invited"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/layout">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvEarnings"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="24dp"
             android:clipToPadding="false"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@id/clTerms"
-            app:layout_constraintTop_toBottomOf="@id/tvInvited"
+            app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="7"
             tools:listitem="@layout/item_earning" />
 
